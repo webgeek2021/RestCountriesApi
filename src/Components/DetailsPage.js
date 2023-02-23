@@ -12,7 +12,7 @@ const DetailsPage = () => {
         let data = getCountryData(name)
         // console.log(data)
         setCountryInfo(data)
-    }, [])
+    },[name])
     // console.log("COUNTRYDATA", countryInfo.currencies)
     const languages = countryInfo.languages?.map((lang) => {
         return lang.name
