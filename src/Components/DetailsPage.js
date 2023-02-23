@@ -10,10 +10,10 @@ const DetailsPage = () => {
 
     React.useEffect(() => {
         let data = getCountryData(name)
-        console.log(data)
+        // console.log(data)
         setCountryInfo(data)
     }, [])
-    console.log("COUNTRYDATA", countryInfo.currencies)
+    // console.log("COUNTRYDATA", countryInfo.currencies)
     const languages = countryInfo.languages?.map((lang) => {
         return lang.name
     })
