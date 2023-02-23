@@ -18,7 +18,7 @@ export const getSearchList = (country) =>{
     // console.log("LIST",country)
     let c = country.toLowerCase()
     let list = []
-    data.map((dt)=>{
+    data.forEach((dt)=>{
         if(dt.name.toLowerCase().includes(c))
         {
             list.push(dt.name)

@@ -8,16 +8,17 @@ const SearchBar = (props) => {
   const [searchList , setSearchList] = React.useState([])
   const [isli , setIsli] = React.useState(false)
 
+  const setCountryData = props.setCountryData()
   React.useEffect(()=>{
     if(search !== "" )
     {
       let newData = SearchCountryData(search)
-      props.setCountryData(newData)
+      setCountryData(newData)
       let list = getSearchList(search)
       setSearchList(list)
     }
     else if(search === ""){
-      props.setCountryData(getAllCountryData())
+      setCountryData(getAllCountryData())
     }
   },[search])
 
