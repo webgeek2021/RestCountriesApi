@@ -1,0 +1,99 @@
+.country__details {
+
+    .back_btn{
+        padding: to-rem(12) to-rem(30);
+        margin-bottom: to-rem(74);
+        border: none;
+        display: block;
+        width: max-content;
+        svg{
+            margin-right: to-rem(10);
+        }
+        @include themify($themes) {
+            background-color: themed("elementBackgroundColor");
+            box-shadow: 0 0 10px themed("boxShadow")  ;
+            color:themed("textColor")      
+        }
+    }
+    @include themify($themes) {
+        color: themed("textColor");
+    }
+
+    li {
+        font-weight: 600;
+    }
+
+    .country-info-value {
+        font-weight: 300;
+    }
+
+    .outer__wrapper {
+        align-items: center;
+
+        .country__flag {
+            width: 100%;
+            height: to-rem(409);
+        }
+
+        .country__section_right {
+            padding-left: to-rem(129);
+
+            .country__name {
+                font-weight: 600;
+                margin-bottom: to-rem(35);
+            }
+
+            .border__countries {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                align-items: flex-start;
+                span{
+                    margin-bottom: to-rem(20);
+                }
+                .border__container {
+                    display: flex;
+                    align-items: center;
+                    .border__country {
+                        padding: to-rem(10);
+                        border-radius: to-rem(5);
+
+                        @include themify($themes) {
+                            background-color: themed("elementBackgroundColor");
+                            border: 1px solid themed("border_color");
+                        }
+
+                        &:not(:last-child) {
+                            margin-right: to-rem(10);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:375px) {
+    .country__details {
+        .outer__wrapper {
+            .country__section_right {
+                padding: 0px 12px; 
+                margin-top: 30px;
+                .country__info{
+                    .row{
+                        div:nth-child(1){
+                            margin-bottom: 25px;
+                        }
+                    }
+                }
+            }
+
+            .border__countries {
+                margin: 0 20px 30px 0;
+                .border__div {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

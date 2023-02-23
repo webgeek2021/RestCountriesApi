@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import { ThemeContext } from "./utility/theme_context";
+import {Outlet} from "react-router-dom";
+import Header from "./Components/Header";
 function App() {
+  
+
+  const isBrowserDefaultDark = () => window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const getDefaultTheme = ()=> {
+    const localStorageTheme = localStorage.getItem('default-theme');
+    const browserDefault = isBrowserDefaultDark() ? 'dark' : 'light';
+    if(!localStorageTheme)
+      localStorage.setItem("Theme",browserDefault)
+    return localStorageTheme || browserDefault;
+  };
+  const [theme, setTheme] = React.useState(getDefaultTheme());
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <div className={`${theme === "dark" ? "theme-dark" : "theme-light"}`}>
+      <Header/>
+      <Outlet/>
+      </div>
+    </ThemeContext.Provider>
   );
 }
 

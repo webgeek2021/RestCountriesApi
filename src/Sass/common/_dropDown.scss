@@ -1,0 +1,53 @@
+
+
+.btn {
+    &:first-child:active {
+        background-color: transparent;
+    }
+}
+
+
+.customDropdown {
+
+    .dropdown-toggle {
+        border: none;
+        @include themify($themes) {
+            background-color: themed("elementBackgroundColor");
+            color: themed("textColor");
+        }
+
+        padding: to-rem(24) to-rem(25);
+        position: absolute;
+        right: 0px;
+
+        &::after {
+            content: url("../..//assets/images/chevron-down-outline.svg");
+            display: inline-block;
+            position: relative;
+            right: 0px;
+            bottom: to-rem(-17);
+            margin-left: to-rem(50);
+        }
+    }
+
+    .dropdown-menu {
+        padding: 0rem;
+        border-radius: 0.5rem;
+        inset: 0.2rem auto auto auto !important;
+        min-width: to-rem(230);
+        @include themify($themes) {
+            background-color: themed("elementBackgroundColor");
+            color: themed("textColor");
+        }
+        .dropdown-item {
+            padding: to-rem(10) to-rem(30);
+            border: none;
+            border-radius: to-rem(2);
+            color: inherit;   
+            &:hover{
+                background-color: transparent;
+                opacity: 0.3;
+            }         
+        }
+    }
+}

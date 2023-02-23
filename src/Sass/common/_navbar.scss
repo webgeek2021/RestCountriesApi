@@ -1,0 +1,33 @@
+.navbar{
+    justify-content: space-between !important;
+    height: to-rem(80);
+    align-items: baseline;
+    position: sticky;
+    top: 0px;
+    align-items: center;
+    z-index: 1001;
+    @include themify($themes) {
+        background-color: themed('headerBackground');
+        color: themed("textColor");
+        box-shadow: 0px 1px 8px themed('backgroundColor');
+    } 
+    .navbar-nav:first-child{
+        h3{
+            font-size: to-rem(16);
+            @include fontFamily(800);
+        }
+    }
+    .navbar-nav:last-child{
+        .darkmode-btn{
+            font-size: to-rem(14);
+            @include fontFamily(600);
+            &::before{
+                display: inline-block;
+                width: 15px;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+        }
+
+    }
+}

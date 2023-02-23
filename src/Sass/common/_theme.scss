@@ -1,0 +1,21 @@
+
+
+$themes : (
+    light : (
+            headerBackground : $whiteColor,
+            backgroundColor : $lightModeBackground,
+            textColor : $lightModeText,
+            elementBackgroundColor : whiteColor,
+            border_color : $lightModeInput,
+            boxShadow : $boxShadowLightMode, 
+        ),
+    dark : (
+        headerBackground : $darkModeElement,
+        backgroundColor : $darkModeBackground,
+        textColor : $whiteColor,
+        elementBackgroundColor : $darkModeElement,
+        border_color : $darkModeElement,
+        boxShadow : $boxShadowDarkMode,
+    )
+);
+

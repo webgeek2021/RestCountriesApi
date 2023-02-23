@@ -1,0 +1,59 @@
+.search-bar{
+    border-radius: to-rem(4);
+    position: relative;
+    @include themify($themes){
+        background-color: themed("elementBackgroundColor");
+        color: themed("textColor");
+    }
+    .input-group{
+        padding: to-rem(18) to-rem(30);
+        .input-group-text , .form-control{
+            background:transparent;
+            border: none;
+            outline: none;
+            color: inherit;
+            &:focus{
+                outline: none;
+                box-shadow: none;
+            }
+        }
+        .form-control::placeholder{
+            @include themify($themes){
+                color: themed("textColor");
+            }
+        }
+    }
+    .seachBar__options{
+        position: absolute;
+        inset: 0.2rem auto auto auto !important;
+        transform: translate(0px, 80px);
+        width: 100%;
+        border-radius: 0.5rem;
+        z-index: 2;
+        height: to-rem(192);
+        overflow-y: scroll;
+        @include themify($themes){
+            background-color: themed("elementBackgroundColor");
+        }
+        &::-webkit-scrollbar{
+            width: 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: $scrollbar-thumb;
+            border-radius: 4px; 
+        }
+        li{
+            padding: to-rem(10) to-rem(0);
+            border: none;
+            border-radius: to-rem(2);
+            color: inherit;   
+            &:hover{
+                background-color: transparent;
+                opacity: 0.3;
+            }         
+        }
+    }
+    .hide-option{
+        display: none;
+    }
+}

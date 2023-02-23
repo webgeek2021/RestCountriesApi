@@ -1,0 +1,68 @@
+
+.cards-container{
+    .container{
+        .card-col{
+            margin-bottom: to-rem(72);
+
+            .card{
+                max-width: to-rem(266);
+                border: none;
+                height: 100%;
+                margin: 0 auto;
+                cursor: pointer;
+                @include themify($themes) {
+                    background-color: themed('elementBackgroundColor');
+                    color: themed("textColor");
+                } 
+                .card-img-top{
+                    height: to-rem(161);
+                }
+                .card-body{
+                    padding: to-rem(30) to-rem(22);
+                    position: relative;
+                    .card-title{
+                        font-size: to-rem(22);
+                        font-weight: 600;
+                        margin-bottom: to-rem(20);
+                    }
+                    .hover-div{
+                        text-transform: uppercase;
+                        // display: none;
+                        opacity: 0;
+                        position: absolute;
+                        top: 0;
+                        
+                        width: 79%;
+                        h1{
+                            text-align: center;
+                            font-size: 2rem;
+                        }
+                    }
+                    
+                }
+                
+            }
+        }
+    }
+    .cards_not_found{
+        text-align: center;
+        @include themify($themes) {
+            color: themed("textColor");
+        } 
+    }
+}
+
+.country-info{
+    li{
+        font-size: to-rem(15);
+        font-weight: 500;
+        &:not(:last-child){
+            margin-bottom: to-rem(10);
+        }
+    }
+    padding: 0px 1px;
+    .country-info-value{
+       
+       opacity: 0.6;
+    }
+}
