@@ -14,11 +14,11 @@
         @include themify($themes) {
             background-color: themed("elementBackgroundColor");
             color: themed("textColor");
+            box-shadow: 0 0 6px -1px themed("boxShadow")  ;
         }
 
         padding: to-rem(24) to-rem(25);
-        position: absolute;
-        right: 0px;
+        float: right;
 
         &::after {
             content: url("../..//assets/images/chevron-down-outline.svg");
@@ -38,6 +38,7 @@
         @include themify($themes) {
             background-color: themed("elementBackgroundColor");
             color: themed("textColor");
+            box-shadow: 0 0 6px -1px themed("boxShadow")  ;
         }
         .dropdown-item {
             padding: to-rem(10) to-rem(30);
@@ -48,6 +49,14 @@
                 background-color: transparent;
                 opacity: 0.3;
             }         
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .customDropdown{
+        .dropdown-toggle{
+            float: left;
         }
     }
 }

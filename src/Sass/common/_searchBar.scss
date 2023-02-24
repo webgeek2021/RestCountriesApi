@@ -4,7 +4,9 @@
     @include themify($themes){
         background-color: themed("elementBackgroundColor");
         color: themed("textColor");
+        box-shadow: 0 0 6px -1px themed("boxShadow")  ;
     }
+    
     .input-group{
         padding: to-rem(18) to-rem(30);
         .input-group-text , .form-control{

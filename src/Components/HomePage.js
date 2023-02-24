@@ -70,12 +70,12 @@ const HomePage = () => {
       <div className='input-fields'>
         <Container>
           <Row>
-            <Col sm={12} md={6}>
+            <Col  sm={12} md={6} >
               <SearchBar 
                 setCountryData ={setCountryData}
               />
             </Col>
-            <Col sm={12} md={6}>
+            <Col sm={12} md={6} >
               <CustomDropDown
                 dropList={dropDownList}
                 handleClick={handleDropDown}

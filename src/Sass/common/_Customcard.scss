@@ -13,6 +13,7 @@
                 @include themify($themes) {
                     background-color: themed('elementBackgroundColor');
                     color: themed("textColor");
+                    box-shadow: 1px 5px 3px -4px themed("boxShadow")  ;
                 } 
                 .card-img-top{
                     height: to-rem(161);

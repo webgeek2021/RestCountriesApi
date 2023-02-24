@@ -90,8 +90,9 @@
 
             .border__countries {
                 margin: 0 20px 30px 0;
-                .border__div {
-                    flex-direction: column;
+                .border__container {
+                    flex-wrap: wrap;
+                    gap: 10px; 
                 }
             }
         }

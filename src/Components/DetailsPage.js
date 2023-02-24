@@ -32,7 +32,7 @@ const DetailsPage = () => {
             <NavLink to={"/"}className="back_btn"> <BiArrowBack /> Back</NavLink>
                     <Row className='outer__wrapper'>
                         <Col sm={12} md={6}>
-                            <Image className='country__flag' src={countryInfo.flag} alt="image of country flag" />
+                            <Image className='country__flag' src={countryInfo.flags?.png} alt="image of country flag" />
                         </Col>
                         <Col sm={12} md={6} className="country__section_right">
                             <h1 className='country__name'>{countryInfo.name}</h1>
