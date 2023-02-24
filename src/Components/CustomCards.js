@@ -5,7 +5,7 @@ const CustomCards = (props) => {
 
   return (
     <Card >
-      <Card.Img variant="top" src={props.Flag} />
+      <Card.Img variant="top" src={props.Flag} alt="image of country flag" />
       <Card.Body>
         <Card.Title>{props.cardTitle}</Card.Title>
         <ul className='country-info'>
