@@ -17,8 +17,12 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`${theme === "dark" ? "theme-dark" : "theme-light"}`}>
+        <header>
       <Header/>
+      </header>
+      <main>
       <Outlet/>
+      </main>
       </div>
     </ThemeContext.Provider>
   );

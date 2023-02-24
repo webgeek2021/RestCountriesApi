@@ -18,10 +18,10 @@ function Header() {
     <Navbar expand="lg" onClick={handleClick}>
       <Container >
         <Nav>
-          <h3>Where in the World ? </h3>
+          <h1>Where in the World ? </h1>
         </Nav>
         <Nav onClick={handleModeChange}>
-          <h5 className="darkmode-btn"  >{theme === "dark" ? <IoIosMoon/> : <BiMoon/>} Dark Mode</h5>
+          <span className="darkmode-btn"  >{theme === "dark" ? <IoIosMoon/> : <BiMoon/>} Dark Mode</span>
         </Nav>
         </Container>
     </Navbar>

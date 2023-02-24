@@ -12,13 +12,16 @@
         box-shadow: 0px 1px 8px themed('backgroundColor');
     } 
     .navbar-nav:first-child{
-        h3{
+        h1{
             font-size: to-rem(16);
-            @include fontFamily(800);
+            margin: 0px;
+            @include fontFamily(600);
+
         }
     }
     .navbar-nav:last-child{
         .darkmode-btn{
+            cursor: pointer;
             font-size: to-rem(14);
             @include fontFamily(600);
             &::before{
